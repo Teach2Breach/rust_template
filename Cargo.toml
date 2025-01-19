@@ -1,0 +1,19 @@
+[package]
+name = "rust_template"
+version = "0.1.0"
+edition = "2021"
+# author = "Teach2Breach"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+litcrypt = "0.3.0"
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size.
+lto = true
+codegen-units = 1
+panic = "abort"
