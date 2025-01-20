@@ -1,4 +1,4 @@
-This is a template that I use when starting new rust projects that I want to be able to compile as an exe or a dll for windows.
+This is a template that I use when starting new rust projects that I want to be able to compile as an exe or a dll with sRDI compatibility for windows.
 
 main (run if compiled to exe) and lib (run if compiled to dll) each just call the Pick function in proto.rs. So the code you want to execute should all be contained in that function (or called by it). To keep things clean, you can put additional functions in func.rs and call them from proto.rs. However, due to how rust treats functions declared in other modules, the functions in func called by proto, must be public. If you want to keep functions private, you can declare them within proto, or have a public helper function in func that calls other private functions within func. An example of each method is used to print hello world in this example.
 
