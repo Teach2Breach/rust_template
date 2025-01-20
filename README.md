@@ -27,7 +27,7 @@ rundll32.exe .\target\release\rust_template.dll,Pick
 To verify the dll worked correctly, verify output.txt was written to current directory and contains Hello, world!
 
 ```
-cat Hello, world!
+cat output.txt Hello, world!
 ```
 
 Since most projects I write are used for malware dev, this project is also set up to use litcrypt. In order to compile a project using litcrypt, make sure to set an environment variable LITCRYPT_ENCRYPT_KEY. The value assigned is arbitrary, it can be anything. For more information see litcrypt documentation: https://docs.rs/litcrypt/latest/litcrypt/
