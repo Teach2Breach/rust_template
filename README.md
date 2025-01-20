@@ -27,6 +27,7 @@ rundll32.exe .\target\release\rust_template.dll,Pick
 Since most projects I write are used for malware dev, this project is also set up to use litcrypt. In order to compile a project using litcrypt, make sure to set an environment variable LITCRYPT_ENCRYPT_KEY. The value assigned is arbitrary, it can be anything. For more information see litcrypt documentation: https://docs.rs/litcrypt/latest/litcrypt/
 
 This project is also purposely structured to be compatible with donut (https://github.com/TheWover/donut). To use donut to convert this project to shellcode, you can use the following syntax (change function name to match the function you want to execute):
+(a2 targets 64 bit. change accordinly, but I never do anything for 32 bit these days)
 
 ```
 .\donut.exe -a2 -i .\rust_template.dll --function Pick -t
