@@ -1,5 +1,5 @@
 //function to print hello world
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub extern "system" fn hello() {
     println!("{}", lc!("Hello, world!"));
 }

@@ -2,7 +2,7 @@ use crate::func;
 use std::fs::File;
 use std::io::Write;
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub extern "system" fn Pick() {
 
     println!("{}", lc!("Calling public hello fn from func.rs"));
